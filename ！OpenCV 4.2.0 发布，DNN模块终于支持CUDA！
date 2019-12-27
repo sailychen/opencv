@@ -1,0 +1,156 @@
+重磅！OpenCV 4.2.0 发布，DNN模块终于支持CUDA！
+原创： CV君 OpenCV中文网 4天前
+点击上方“OpenCV中文网”，选择加"星标"或“置顶”
+
+重磅干货，第一时间送达
+
+
+
+
+
+每年的圣诞节前，OpenCV 都会发布新版本，2 天前OpenCV 4.2.0 悄悄发布并开放下载了，这次更新的特性并不多，但非常重要的是：DNN终于支持CUDA啦！！
+
+
+
+该版本亮点：
+
+
+
+
+
+DNN模块
+
+
+
+1. 集成了来自GSoC工程的CUDA的支持，现在可以使用NVIDIA GPU CUDA 加速模型推理。
+
+
+
+
+
+
+
+下图为部分深度学习模型实验，使用CUDA 在 RTX 2080 TI显卡上实验结果，包括图像分类、文本检测、图像风格化、目标检测、语义分割等多种深度学习模型。
+
+
+
+
+
+可见在YOLOv3上 ，OpenCV DNN with CUDA 取得了比DarkNet更快的速度。
+
+
+
+以下视频为OpenCV YOLOv3 在车辆检测中的效果：
+
+
+
+
+
+
+
+2. 新增对Intel 推理引擎OpenVINO nGraph  API 的支持；
+
+
+
+
+
+性能改进
+
+
+
+1. SIMD 指令集加速: StereoBM/StereoSGBM algorithms, resize, integral, flip, accumulate with mask, HOG, demosaic, moments
+
+
+
+2. 多线程加速: pyrDown
+
+
+
+
+
+社区贡献代码
+
+
+
+1. VideoCapture: 使用FFmpeg提取视频流 (demuxing)
+
+
+
+2. VideoCapture: 摄像头输入的多路复用函数 waitAny()  (Video4Linux 中使用 poll() ).
+
+
+
+3. (opencv_contrib) 新增图像修补的 Rapid Frequency Selective Reconstruction (FSR)算法
+
+https://docs.opencv.org/4.2.0/dc/d2f/tutorial_xphoto_inpainting.html
+
+原图和破坏后的图：
+
+
+
+
+
+
+
+修复后的图：
+
+
+
+左图为快速方法结果，右图为best质量方法结果。
+
+
+
+4. (opencv_contrib) 新增了用于稀疏匹配插值的RIC方法
+
+https://github.com/opencv/opencv_contrib/pull/2367
+
+
+
+5. (opencv_contrib) LOGOS 特征匹配策略（来自ICRA2018）
+
+https://github.com/opencv/opencv_contrib/pull/2383
+
+
+
+
+
+
+
+这次的新特性是不是够吸引人?想要尝鲜新版本的同学，赶紧下载吧！
+
+
+
+下载地址：
+
+https://github.com/opencv/opencv/releases
+
+也可在OpenCV中文网公众号后台回复“OpenCV42”，即可收到百度云下载地址。
+
+
+
+OpenCV技术交流群
+
+
+
+关注最新的OpenCV技术，欢迎加入开发者群群，扫码添加CV君拉你入群，
+
+（请务必注明：opencv）
+
+
+
+喜欢在QQ交流的童鞋，可以加52CV官方QQ群：805388940。
+
+（不会时时在线，如果没能及时通过验证还请见谅）
+
+OpenCV中文网专注分享：
+
+OpenCV实用技术、计算机视觉最新突破，
+
+长按下方二维码关注。
+
+
+
+文章已于2019-12-23修改
+
+微信扫一扫
+关注该公众号
